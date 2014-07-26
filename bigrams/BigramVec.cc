@@ -25,7 +25,7 @@ vector<string> BigramVec::query(vector<string> qr) {
 
   int toMatch = qr.size()/2 - 2;
 
-  for(vector<Bigram>::iterator it = bigrams.begin(); it != bigrams.end(); it++) {
+  for(auto it = bigrams.begin(); it != bigrams.end(); it++) {
     pair<string, int> mt = it->match(qr);
     // cout<<mt.first << " " <<mt.second<<"\n";
     if (mt.second > toMatch) {
@@ -52,7 +52,7 @@ void BigramVec::match(string str) {
 void BigramVec::print() {
   
   cout<<"Matched values "<<endl;
-  for (vector<string>::iterator it = matched.begin(); it != matched.end(); it++) {
+  for (auto it = matched.begin(); it != matched.end(); it++) {
     cout << *it <<"\n";
   }
 }

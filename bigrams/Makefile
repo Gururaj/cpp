@@ -1,8 +1,8 @@
 CC=gcc
 CXX=g++
 RM=rm -f
-CPPFLAGS=-g 
-LDFLAGS=-g 
+CPPFLAGS=-g -Wc++11-extensions
+LDFLAGS=-g -Wc++11-extensions
 LDLIBS=-lboost_regex -lglog -lboost_serialization
 BINARY=spellcheck
 SRCS=main.cc utils.cc Bigram.cc BigramVec.cc serialize.cc

@@ -26,7 +26,7 @@ void Bigram::set(string str) {
 
 void Bigram::dump() {
   cout<<"Count:"<<_count<<"\n";
-  for(vector<string>::iterator it = _bigrams.begin(); it != _bigrams.end(); ++it) {
+  for(auto it = _bigrams.begin(); it != _bigrams.end(); ++it) {
     cout << *it <<" ";
   }
   cout<<"\n";
@@ -39,7 +39,7 @@ pair<string, int> Bigram::match(vector<string> qr) {
   int matched = 0;
 
   for(
-      vector<string>::iterator it = qr.begin(), bit = _bigrams.begin(); 
+      auto it = qr.begin(), bit = _bigrams.begin(); 
       it != qr.end() && bit != _bigrams.end(); 
       ) {
     
